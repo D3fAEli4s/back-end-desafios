@@ -1,10 +1,10 @@
 {
-  "name": "desafio-3",
+  "name": "back-end-desafios",
   "version": "1.0.0",
-  "description": "Desafio 3",
-  "main": "app.js",
+  "description": "Primera Entrega",
+  "main": "src/server.js",
   "scripts": {
-    "start": "nodemon src/app.js"
+    "start": "nodemon"
   },
   "author": "Elias De fabrittis",
   "license": "ISC",
