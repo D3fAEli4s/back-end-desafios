@@ -1,17 +1,29 @@
-import express from "express";
+import dotenv from "dotenv";
+dotenv.config();
+
+import express from 'express';
 import productsRouter from "./routes/productsRouter.js";
 import cartsRouter from "./routes/cartsRouter.js";
+import mongoose from "mongoose";
 
-const app = express();
-const PORT = 8080;
-	
-app.use(express.urlencoded({ extended: true }));
+const PORT = 8080
 
-app.use(express.json());
+void (async() =>
+	{
+		await mongoose.connect("mongodb+srv://defaaa:Lintendoelias88@basedefa.nl2awb0.mongodb.net/?retryWrites=true&w=majority", {
+			useNewUrlParser: true,
+			useUnifiedTopology: true
+		});
 
-app.use("/api/products", productsRouter);
+		const app = express();
 
-app.use("/api/carts", cartsRouter);
+		app.use(express.json());
+		app.use(express.urlencoded({ extended: true }));
 
-app.listen(PORT, () => {console.log(`READY: Server listen on port ${PORT}`)});
+		app.use('/api/products', productsRouter);
+		app.use('/api/carts', cartsRouter);
+app.listen(PORT, () => {
+			console.log(`Ready: Server listening on port ${PORT}`);
+		});
+	})();
 
