@@ -1,0 +1,29 @@
+{
+  "name": "back-end-desafios",
+  "version": "1.0.0",
+  "description": "Desafio-5",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "nodemon"
+  },
+  "author": "Elias De fabrittis",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "connect-mongo": "^5.0.0",
+    "cookie-parser": "^1.4.6",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "express-session": "^1.17.3",
+    "mongoose": "^7.1.0",
+    "mongoose-paginate-v2": "^1.7.1",
+    "mongose": "^0.0.2-security",
+    "multer": "^1.4.5-lts.1",
+    "node": "^20.2.0"
+  },
+  "keywords": [],
+  "type": "module"
+}
