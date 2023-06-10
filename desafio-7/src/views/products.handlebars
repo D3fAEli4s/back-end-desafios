@@ -1,0 +1,34 @@
+<div>
+  <h1>Bienvenida</h1>
+  {{#if userRole}}
+  <h2>1: Opciones del {{userRole}}</h2>
+  <button><a href="#">Registrar Usuarios</a></button>
+  {{/if}}
+  <h2>2: Perfil de usuario</h2>
+  <p> Nombre: {{user.name}}</p>
+  <button><a href="/logout">Logout</a></button>
+</div>
+  <h2>3: Lista de Productos</h2>
+  <div>
+    {{#each products}}
+    <div class="card">
+      <a href="/product/{{this._id}}"><h5 class="card-title">{{this.title}}</h5></a>
+      <p>{{this.description}} </p> 
+      <div class="container">
+        <button class="add-item" data-id="{{this._id}}">Agregar al Carrito</button>
+      </div>
+    </div>
+    <br>
+    {{/each}}
+  </div>
+  <br>
+  <div>
+    {{#if hasPrevPage}}
+      <a href="{{prevLink}}"><button class="btn btn-primary">Anterior</button></a>
+    {{/if}}
+    <p style="display: inline">{{page}} of {{totalPages}}</p>
+    {{#if hasNextPage}}
+      <a href="{{nextLink}}"><button class="btn btn-primary">Siguiente</button></a>
+    {{/if}}
+  </div>
+</div>
