@@ -1,0 +1,55 @@
+{
+  "name": "proyecto-final",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/App.js",
+  "scripts": {
+    "test": "mocha test/Products.test.js",
+    "start:dev": "set NODE_ENV=development && nodemon src/App.js",
+    "start": "set NODE_ENV=production&& node src/App.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/D3fAEli4s/back-end-desafios.git"
+  },
+  "keywords": [],
+  "author": "Elias De Fabrittis",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/D3fAEli4s/back-end-desafios/issues"
+  },
+  "homepage": "https://github.com/D3fAEli4s/back-end-desafios#readme",
+  "dependencies": {
+    "@faker-js/faker": "^8.0.2",
+    "bcrypt": "^5.1.0",
+    "commander": "^10.0.1",
+    "connect-mongo": "^5.0.0",
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "dotenv": "^16.1.4",
+    "express": "^4.18.2",
+    "express-compression": "^1.0.2",
+    "express-handlebars": "^6.0.7",
+    "express-validator": "^7.0.1",
+    "faker": "^5.5.3",
+    "jsonwebtoken": "^9.0.0",
+    "mongoose": "^7.0.5",
+    "mongoose-paginate-v2": "^1.7.1",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "nodemailer": "^6.9.4",
+    "nodemon": "^3.0.1",
+    "passport": "^0.6.0",
+    "passport-github2": "^0.1.12",
+    "passport-jwt": "^4.0.1",
+    "passport-local": "^1.0.0",
+    "socket.io": "^4.6.1",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.0",
+    "uuidv4": "^6.2.13",
+    "winston": "^3.10.0"
+  },
+  "devDependencies": {
+    "mocha": "^10.2.0"
+  }
+}
